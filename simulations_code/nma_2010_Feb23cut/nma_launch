@@ -1,0 +1,9 @@
+#!/bin/sh
+# the next line restarts using wish \
+exec $FSLTCLSH "$0" "$@"
+
+source $env(FSLDIR)/tcl/fslstart.tcl
+set filename [ lindex $argv 0 ]
+set INGUI 0
+nma:load $INGUI $filename $INGUI 
+nma:apply
